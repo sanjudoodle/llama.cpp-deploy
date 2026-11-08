@@ -544,6 +544,7 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "fastapi", extra = ["standard"] },
+    { name = "httpx" },
     { name = "llama-cpp-python" },
     { name = "python-dotenv" },
 ]
@@ -557,6 +558,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "fastapi", extras = ["standard"], specifier = ">=0.162.0" },
+    { name = "httpx", specifier = ">=0.28.1" },
     { name = "llama-cpp-python", specifier = ">=0.3.36" },
     { name = "python-dotenv", specifier = ">=1.2.4" },
 ]

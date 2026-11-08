@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from llamacpp_deploy.routers import homepage, health
+from llamacpp_deploy.routers import health, homepage
 
 app = FastAPI()
 

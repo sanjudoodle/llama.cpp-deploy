@@ -1,10 +1,12 @@
+import httpx
 from fastapi import APIRouter, Request
 from fastapi.routing import APIRoute
+
 from llamacpp_deploy.routers import homepage
-import httpx
 
 router = APIRouter(tags=["health"])
 routers = [homepage.router]
+
 
 @router.get("/health")
 async def health(request: Request):
@@ -12,10 +14,7 @@ async def health(request: Request):
     async with httpx.AsyncClient(base_url=str(request.base_url), timeout=5.0) as client:
         for api_router in routers:
             for route in api_router.routes:
-                if (
-                    not isinstance(route, APIRoute)
-                    or "GET" not in route.methods
-                ):
+                if not isinstance(route, APIRoute) or "GET" not in route.methods:
                     continue
 
                 try:

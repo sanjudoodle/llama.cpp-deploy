@@ -13,3 +13,4 @@ except PackageNotFoundError:
 
 MODELNAME = os.getenv("MODELNAME", "unknown")
 HOSTNAME = socket.gethostname()
+LLAMACPP_URL = os.getenv("LLAMACPP_MODEL", "http://localhost:8080/v1")

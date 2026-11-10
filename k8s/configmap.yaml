@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap 
+
+metadata:
+  name: api-config
+  namespace: development
+
+data:
+  MODELNAME: "qwen2.5-0.5b-instruct"
+  LLAMACPP_URL: "http://llama:8080/v1"
+

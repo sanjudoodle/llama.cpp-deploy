@@ -30,6 +30,6 @@ def chat(request: ChatRequest):
             max_tokens=128,
         )
     except OpenAIError:
-        raise HTTPException(status_code=502, detail="LLM unreachable")
+        raise HTTPException(status_code=502, detail="LLM service unreachable")
 
     return {"reply": response.choices[0].message.content or "Unable to generate text"}

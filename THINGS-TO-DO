@@ -1,0 +1,6 @@
+create persistent storage in k8s
+move the model to the storage
+
+make deployment
+make service
+

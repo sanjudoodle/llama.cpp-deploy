@@ -14,7 +14,9 @@ Dockerfile*
 *compose.yml
 *compose.yaml
 
+.gitignore
 .env
+.env.*
 *.pem
 *.key
 
